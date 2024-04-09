@@ -634,6 +634,7 @@ textarea {
 @media only screen and (max-width: 56.25em) {
     .projects__row-content {
         align-items: center;
+        order: 1;
     }
 }
 
