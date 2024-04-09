@@ -106,6 +106,14 @@ textarea {
     grid-template-rows: auto auto;
 }
 
+.zoom {
+    transition: transform 0.3s ease-out;
+}
+
+.zoom:hover {
+    transform: scale(1.05);
+}
+
 .epic-button.tour-page {
     margin-top: 0px;
     margin-right: 10%;
@@ -267,7 +275,7 @@ textarea {
 
 @media only screen and (max-width: 37.5em) {
     .heading-sec__sub {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -454,7 +462,7 @@ textarea {
 @media only screen and (max-width: 37.5em) {
     .home-hero {
         height: unset;
-        min-height: unset;
+        min-height: 100vh;
         /* background: linear-gradient(to right, #0d1116e3, #0d1116e3), url(https://dopefolio.netlify.app/assets/svg/common-bg.svg); */
     }
 }
@@ -590,7 +598,7 @@ textarea {
 
 .projects__row {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.3fr 1.2fr;
     grid-gap: 5rem;
     margin-bottom: 11rem;
 }

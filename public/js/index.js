@@ -38,13 +38,23 @@ headerLogoConatiner.addEventListener("click", () => {
 });
 
 var color = "#FFFFFF";
+
+var win = window,
+    doc = document,
+    docElem = doc.documentElement,
+    body = doc.getElementsByTagName("body")[0],
+    x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+    y = win.innerHeight || docElem.clientHeight || body.clientHeight;
+
 function maxParticles() {
-    if (window.screen.width < 580) {
-        return 8;
+    if (x < 580) {
+        return 20;
     } else {
-        return 80;
+        return 100;
     }
 }
+
+console.log(maxParticles());
 
 Particles.init({
     selector: "#particles-js",
@@ -66,7 +76,12 @@ Particles.init({
         autoplay: true,
         dots: true,
         loop: true,
-        responsive: { 0: { items: 2 }, 768: { items: 4 }, 900: { items: 7 } },
+        responsive: {
+            0: { items: 4 },
+            768: { items: 5 },
+            1000: { items: 6 },
+            1200: { items: 8 },
+        },
     });
 })(jQuery);
 
