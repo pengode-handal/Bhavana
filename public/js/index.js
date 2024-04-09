@@ -66,6 +66,29 @@ Particles.init({
         autoplay: true,
         dots: true,
         loop: true,
-        responsive: { 0: { items: 2 }, 768: { items: 4 }, 900: { items: 5 } },
+        responsive: { 0: { items: 2 }, 768: { items: 4 }, 900: { items: 7 } },
     });
 })(jQuery);
+
+const tbl = document.querySelector(".tombol-trigger");
+function detailAnime(data) {
+    return `
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-3-fix modal-tengah ">
+                <img src="${data.images.webp.image_url}" alt="" class="img-fluid">
+                <h5 class="card-title btn btn-batas btn-danger">${data.score}</h5>
+            </div>
+            <div class="col-md">
+                <ul class="list-group">
+                    <li class="list-group-item">Rank: ${data.rank}</li>
+                    <li class="list-group-item">Broadcast: ${data.broadcast}</li>
+                    <li class="list-group-item">Aired: ${data.aired.string}</li>
+                    <li class="list-group-item">Rating: ${data.rating}</li>
+                    <li class="list-group-item">Type: ${data.type}</li>
+                    <li class="list-group-item">Status: ${data.status}</li>
+                </ul>
+            </div>
+        </div>
+    </div>`;
+}
