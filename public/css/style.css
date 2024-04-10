@@ -380,12 +380,15 @@ textarea {
     opacity: 1;
 }
 
-#clients .owl-nav,
-#clients .owl-dots {
+#clients .owl-nav {
     margin-top: 10px;
-    text-align: center;
+    display: flex;
+    align-self: center;
 }
 
+#clients .owl-dots {
+    display: none;
+}
 #clients .owl-dot {
     display: inline-block;
     margin: 0 5px;

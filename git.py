@@ -13,7 +13,8 @@ email = data["email"]
 os.system("git add .")
 # os.system("git remote add origin https://github.com/pengode-handal/P5-3B")
 pesan = input("Masukin pesan: ")
-branch = input("masukin nama branch(kalau belum ada buat dulu): ")
+branch = input("masukin nama branch(default main): ") or "main"
+
 os.system(f"git commit -m \"{pesan}\"")
 os.system(f"git branch -M {branch}")
 os.system(f"git push -u origin {branch}")
