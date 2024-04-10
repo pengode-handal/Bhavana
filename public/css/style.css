@@ -382,7 +382,7 @@ textarea {
 
 #clients .owl-nav {
     margin-top: 10px;
-    display: flex;
+    display: hidden;
     align-self: center;
 }
 
@@ -635,7 +635,7 @@ textarea {
 }
 
 .projects__row-content {
-    padding: 2rem 0;
+    padding-bottom: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -2005,7 +2005,8 @@ blockquote.u-text.u-indent-20 {
 }
 
 .btn:hover {
-    color: #a6b0cf;
+    color: #f0f0f0;
+    background-color: #111111;
     text-decoration: none;
 }
 

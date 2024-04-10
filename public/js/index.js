@@ -76,8 +76,6 @@ Particles.init({
         autoplay: true,
         dots: true,
         loop: true,
-        nav: true,
-        navText: ["Previous", "Next"],
         responsive: {
             0: { items: 4 },
             768: { items: 5 },
