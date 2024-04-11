@@ -8487,7 +8487,8 @@ fieldset:disabled .btn {
 }
 
 .fs-5 {
-    font-size: 1.01563rem !important;
+    font-size: 2rem;
+    color: #fff;
 }
 
 .fs-6 {
@@ -12280,27 +12281,6 @@ fieldset:disabled .btn {
 html {
     position: relative;
     min-height: 100%;
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-    color: #f6f6f6;
 }
 
 a {
