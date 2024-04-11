@@ -299,7 +299,7 @@ textarea {
     background: #fff;
     color: #333;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     display: inline-block;
     font-weight: 700;
     border-radius: 5px;
@@ -365,7 +365,7 @@ textarea {
 
 #clients {
     padding: 30px 0;
-    background-color: #18392b;
+    background-color: #1b1f2f;
 }
 
 #clients img {
@@ -548,7 +548,8 @@ textarea {
 }
 
 .about {
-    background: rgb(6 82 49);
+    /* background: rgb(6 82 49); */
+    background-color: #23283d;
     /* background-image: url("https://images.alphacoders.com/708/708947.jpg"); */
 }
 
