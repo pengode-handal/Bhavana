@@ -1,4 +1,22 @@
 // ---
+
+async function ambilLogo(file) {
+    const response = await fetch(file); // Replace 'template.html' with the actual path
+    const template = await response.text();
+    return template;
+}
+function masukinLogo(template, element) {
+    const parentElement = document.querySelector(element); // Replace with actual ID
+    parentElement.innerHTML = template;
+}
+
+ambilLogo("link_jadi.html")
+    .then((template) => masukinLogo(template, ".medpart"))
+    .catch((error) => console.error("Error:", error));
+ambilLogo("link_jadi_sponsor.html")
+    .then((template) => masukinLogo(template, ".spons"))
+    .catch((error) => console.error("Error:", error));
+
 const hamMenuBtn = document.querySelector(".header__main-ham-menu-cont");
 const smallMenu = document.querySelector(".header__sm-menu");
 const headerHamMenuBtn = document.querySelector(".header__main-ham-menu");
@@ -107,3 +125,30 @@ function detailAnime(data) {
         </div>
     </div>`;
 }
+
+const sponsorButton = document.querySelector(".sponsorButton");
+const medpartButton = document.querySelector(".medpartButton");
+const medpartSection = document.querySelector(".medpartSection");
+const sponsorSection = document.querySelector(".sponsorSection");
+
+sponsorButton.addEventListener("click", () => {
+    console.log("sponsorButton clicked");
+    medpartSection.classList.toggle("hilang");
+    sponsorSection.classList.toggle("hilang");
+    medpartSection.removeAttribute("id");
+    console.log("id hilang");
+
+    sponsorSection.setAttribute("id", "clients");
+    console.log("set id");
+});
+
+medpartButton.addEventListener("click", () => {
+    console.log("medpartButton clicked");
+    medpartSection.classList.toggle("hilang");
+    sponsorSection.classList.toggle("hilang");
+    sponsorSection.removeAttribute("id");
+    console.log("id hilang");
+
+    medpartSection.setAttribute("id", "clients");
+    console.log("set id");
+});
